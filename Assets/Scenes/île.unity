@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.0015
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubtractiveShadowColor: {r: 0.4206568, g: 0.48583218, b: 0.6509434, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d4454f71d85928744be7771e2143dab7, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -249,6 +249,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 82628202}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &111038138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 111038139}
+  - component: {fileID: 111038140}
+  m_Layer: 0
+  m_Name: Skymanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &111038139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111038138}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 48.264183, y: 28.404182, z: 113.51529}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1374065585}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &111038140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111038138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e2cb40ba172da4599c20c979f73366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skySpeed: 1.5
 --- !u!1001 &115091283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1201,6 +1246,7 @@ GameObject:
   - component: {fileID: 523196468}
   - component: {fileID: 523196470}
   - component: {fileID: 523196469}
+  - component: {fileID: 523196471}
   m_Layer: 0
   m_Name: "Tour \xEEle"
   m_TagString: Untagged
@@ -1291,6 +1337,27 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1029821320}
+--- !u!320 &523196471
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523196467}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 612ff9248e785474ba3a240ca6bc825e, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -6629118932335780738, guid: 612ff9248e785474ba3a240ca6bc825e, type: 2}
+    value: {fileID: 523196467}
+  - key: {fileID: -8267705203580891333, guid: 612ff9248e785474ba3a240ca6bc825e, type: 2}
+    value: {fileID: 9172971895776176652}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1001 &547572341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3122,6 +3189,7 @@ Transform:
   - {fileID: 25782049}
   - {fileID: 1814885744}
   - {fileID: 432834632}
+  - {fileID: 111038139}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1381042909
@@ -5330,7 +5398,7 @@ LightingSettings:
   m_FinalGatherFiltering: 1
   m_PVRCulling: 1
   m_PVRSampling: 1
-  m_PVRDirectSampleCount: 32
+  m_PVRDirectSampleCount: 2
   m_PVRSampleCount: 512
   m_PVREnvironmentSampleCount: 256
   m_PVREnvironmentReferencePointCount: 2048
@@ -5755,6 +5823,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 528dceecc39986449816e109df7dc67f, type: 3}
+--- !u!1 &9172971895776176652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3368895518401640553, guid: 528dceecc39986449816e109df7dc67f,
+    type: 3}
+  m_PrefabInstance: {fileID: 9172971895776176651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
