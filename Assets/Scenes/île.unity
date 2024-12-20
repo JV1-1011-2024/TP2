@@ -14239,7 +14239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovingDistances: {x: 0.002, y: 0.001, z: 0}
-  speed: 2
+  speed: 3
   WaveRotations: {x: 0, y: 0, z: 0}
   WaveRotationsSpeed: 0.3
   AxisOffsetSpeed: {x: 0, y: 0, z: 0}
